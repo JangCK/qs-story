@@ -1,0 +1,14 @@
+{
+    "name": "qs-story",
+    "files": [
+        {
+            "glob": "**/*.md"
+        },
+        {
+            "glob": "**/*.txt"
+        },
+        {
+            "glob": "**/*.json"
+        }
+    ]
+}
