@@ -1,0 +1,15 @@
+# 1. fzf로 미리보면서 파일을 골라 Kate에서 열기
+function kk {
+    $file = fzf --preview "cat {}" --preview-window=right:60%
+    if ($file) {
+        kate $file
+    }
+}
+
+# 2. fzf로 미리보면서 파일을 골라 제미나이에게 보내기
+function gz {
+    $file = fzf --preview "cat {}" --preview-window=right:60%
+    if ($file) {
+        cat $file | gemini-cli "이 노트를 요약하고 핵심 태그 3개를 뽑아줘"
+    }
+}
